@@ -17,7 +17,7 @@ P4Vector[][][][] makeCube4(float r) {
 }
 
 void setup() {
-  size(800, 800, P3D);
+  size(1440, 800, P3D);
   cube = makeCube4(1);
 }
 
@@ -28,7 +28,7 @@ void draw() {
   rotateX(-PI/2);
   //rotateY(PI/2);
   //rotateZ(angle1);
-  strokeWeight(9);
+  strokeWeight(15);
   stroke(255);
 
   PVector[][][][] projected3d = new PVector[2][2][2][2];
@@ -47,7 +47,7 @@ void draw() {
       for (int z = 0; z < 2; z++) {
         for (int w = 0; w < 2; w++) {
           if (w == 0) stroke(212, 175, 55);
-          else stroke(75, 0, 130);
+          else stroke(255, 0, 255);
           point(projected3d[x][y][z][w].x, projected3d[x][y][z][w].y, projected3d[x][y][z][w].z);
         }
       }
@@ -117,7 +117,7 @@ void connect(PVector a, PVector b) {
   line(a.x, a.y, a.z, b.x, b.y, b.z);
 }
 void connections(PVector[][][][] projected3d) {
-  strokeWeight(2);
+  strokeWeight(3);
   stroke(49, 137, 180);
 
   // CUBE 1
