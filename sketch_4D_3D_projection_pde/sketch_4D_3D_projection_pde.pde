@@ -57,8 +57,8 @@ void draw() {
   connections(projected3d);
 
 
-  angle1 += 0.015;
-  angle2 += 0.015;
+  angle1 += 0.0030;
+  angle2 += 0.00400;
 }
 
 
@@ -118,7 +118,7 @@ void connect(PVector a, PVector b) {
 }
 void connections(PVector[][][][] projected3d) {
   strokeWeight(3);
-  stroke(49, 137, 180);
+  stroke(49*angle1, 137, 180);
 
   // CUBE 1
   connect(projected3d[0][0][0][0], projected3d[1][0][0][0]);
